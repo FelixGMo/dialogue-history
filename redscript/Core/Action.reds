@@ -1,5 +1,6 @@
 module DialogueHistory.Core
 
+import DialogueHistory.Utils.Logger.*
 import DialogueHistory.UI.DialogueHistoryPopup
 import Codeware.Localization.LocalizationSystem
 
@@ -85,7 +86,7 @@ protected cb func OnAction(action: ListenerAction, consumer: ListenerActionConsu
 
   if Equals(actionName, n"ShowDialogueHistory") && Equals(actionType, gameinputActionType.BUTTON_RELEASED) {
     if !Codeware.Require("1.1.4") {
-      LogChannel(n"DEBUG", "DialogueHistory requires Codeware 1.1.4+");
+      DHLogWarning("Codeware 1.1.4+ is required");
       return result;
     }
 
