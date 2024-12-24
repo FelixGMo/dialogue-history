@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<bindings>
+  <context name="VehicleDriveBase" append="true">
+    <action name="ShowDialogueHistory" map="ShowDialogueHistory_Button" />
+  </context>
+
+  <context name="Locomotion" append="true">
+    <action name="ShowDialogueHistory" map="ShowDialogueHistory_Button" />
+  </context>
+
+  <context name="CameraMovement" append="true">
+    <action name="ShowDialogueHistory" map="ShowDialogueHistory_Button" />
+  </context>
+
+  <!-- You can change the hotkeys here -->
+  <!-- Supported input keys: https://nativedb.red4ext.com/e/1069987916070430 -->
+
+  <!-- Controller binding -->
+
+  <buttonGroup id="DH_Pad_Binding" timeWindow="0.08f" >
+    <button id="IK_Pad_DigitLeft" />
+    <button id="IK_Pad_X_SQUARE" />
+  </buttonGroup> 
+
+  <!-- Keyboard binding -->
+
+  <buttonGroup id="DH_Keyboard_Binding">
+    <button id="IK_L" />
+  </buttonGroup>
+
+  <mapping name="ShowDialogueHistory_Button" type="Button">
+    <button id="DH_Pad_Binding" />
+    <button id="DH_Keyboard_Binding" />
+	</mapping>
+</bindings>
